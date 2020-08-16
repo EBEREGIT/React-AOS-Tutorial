@@ -9,7 +9,7 @@ This tutorial is a demonstration of how AOS can be used to animate a REACT websi
 - ``git clone https://github.com/EBEREGIT/React-AOS-Tutorial`` to clone the repository
 - ``cd React-AOS-Tutorial`` to navigate into the project directory
 - Run ``npm install``
-- Run ``npm start
+- Run ``npm start``
 
 ### Author
 - [Njoku Samson Ebere](https://twitter.com/eberetwit)
