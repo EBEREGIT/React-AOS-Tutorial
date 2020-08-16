@@ -1,7 +1,19 @@
+// external imports
 import React from "react";
-import "./App.css";
 import AOS from "aos";
+import { AiFillTwitterCircle } from "react-icons/ai";
+import { DiGithubBadge } from "react-icons/di";
+import { FaCodepen } from "react-icons/fa";
+import { IoLogoLinkedin } from "react-icons/io";
+import { IconContext } from "react-icons";
+import styled from "styled-components";
+import { BsFillAlarmFill, BsFillArchiveFill } from "react-icons/bs";
+
+// internal imports
+import "./App.css";
 import "aos/dist/aos.css";
+
+// initialization
 AOS.init();
 
 function App() {
@@ -16,7 +28,21 @@ function App() {
         data-aos-easing="ease-in-out-cubic"
       >
         <div className="navbar-header">
+          {/* styling multiple icons */}
+          <IconContext.Provider value={{ className: "top-react-icons" }}>
+            <AiFillTwitterCircle />
+            <FaCodepen />
+          </IconContext.Provider>
           <h1>Navigation</h1>
+
+          {/* styling individual icons */}
+          <IconContext.Provider value={{ color: "blue" }}>
+            <IoLogoLinkedin />
+          </IconContext.Provider>
+
+          <IconContext.Provider value={{ color: "green" }}>
+            <DiGithubBadge />
+          </IconContext.Provider>
         </div>
       </nav>
 
@@ -28,7 +54,9 @@ function App() {
         data-aos-easing="ease-in-out-cubic"
       >
         <div className="jumbotron">
+          <Alarm />
           <h1>Header</h1>
+          <Archive />
         </div>
       </header>
 
@@ -140,7 +168,7 @@ function App() {
           data-aos="fade-up"
           data-aos-anchor-placement="top-bottom"
           data-aos-easing="ease-in-back"
-              data-aos-delay="1000"
+          data-aos-delay="1000"
         >
           <h1>Footer</h1>
         </div>
@@ -150,3 +178,17 @@ function App() {
 }
 
 export default App;
+
+// archive styled component
+const Archive  = styled(BsFillArchiveFill)`
+  color: purple;
+  transform: scale(2);
+  margin: 5%;
+`;
+
+// alarm styled component
+const Alarm = styled(BsFillAlarmFill)`
+  color: red;
+  transform: scale(2);
+  margin: 5%;
+`;
