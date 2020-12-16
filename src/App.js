@@ -46,6 +46,16 @@ function App() {
         </div>
       </nav>
 
+      <section>
+        <a href="tel:2348101234567" className="btn btn-success">
+          Call
+        </a>
+
+        <a href="sms:2348101234567" className="btn btn-warning">
+          Text
+        </a>
+      </section>
+
       {/* <!-- header --> */}
       <header
         data-aos="zoom-out-up"
@@ -173,9 +183,9 @@ function App() {
           <h1>Footer</h1>
         </div>
       </footer>
-    
-    {/* WhatsApp icon */}
-    <a
+
+      {/* WhatsApp icon */}
+      <a
         href="https://wa.me/2348100000000"
         class="whatsapp_float"
         target="_blank"
@@ -183,8 +193,6 @@ function App() {
       >
         <i class="fa fa-whatsapp whatsapp-icon"></i>
       </a>
-    
-    
     </div>
   );
 }
@@ -192,7 +200,7 @@ function App() {
 export default App;
 
 // archive styled component
-const Archive  = styled(BsFillArchiveFill)`
+const Archive = styled(BsFillArchiveFill)`
   color: purple;
   transform: scale(2);
   margin: 5%;
